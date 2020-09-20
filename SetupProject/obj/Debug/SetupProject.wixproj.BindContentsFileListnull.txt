@@ -1,0 +1,7 @@
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\AdvancedDataGridView.dll
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\icon.ico
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\ikona.ico
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\itextsharp.dll
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\PlanLetenja.exe
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\PlanLetenja.exe.config
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\PlanLetenja\bin\Debug\slikalogo.jpg

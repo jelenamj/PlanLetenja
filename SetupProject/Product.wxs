@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define PlanLetenja_TargetDir=$(var.PlanLetenja.TargetDir)?>
+	<Product Id="4516F387-48CB-4FCB-A1E7-BBA178C17334" Name="PlanLetenja" Language="1033" Version="1.0.0.0" Manufacturer="Jelena i Ljubomir" UpgradeCode="a9f48832-9833-459b-b2c2-be0b7f81af8a">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    
+    <Icon Id="icon.ico" SourceFile="$(var.ProjectDir)Icon.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+    
+    <UIRef Id="WixUI_Minimal" />
+		
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="PlanLetenja" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+     <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="PlanLetenja" />
+			</Directory>
+    <Directory Id="ProgramMenuFolder">
+    <Directory Id="ApplicationProgramsFolder" Name="PlanLetenja" />
+		</Directory>
+    <Directory Id="DesktopFolder" Name="Desktop" />
+  </Directory>
+	</Fragment>
+  
+<Fragment>
+  <DirectoryRef Id="ApplicationProgramsFolder">
+    <Component Id="ApplicationShortcut" Guid="3A9AB9CB-F930-414F-80D8-408C726CA8CE">
+      <Shortcut Id="ApplicationStartMenuShortcut" Name="PlanLetenja" Description="PlanLetenja" Target="[INSTALLFOLDER]PlanLetenja.exe" WorkingDirectory="INSTALLFOLDER" />
+      <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+      <RegistryValue Root="HKCU" Key="Software\PlanLetenja" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+    </Component>
+  </DirectoryRef>
+  <DirectoryRef Id="DesktopFolder">
+   <Component Id="ApplicationShortcutDesktop" Guid="9E8AB946-679B-4D2D-B627-4D2084E8FD99">
+     <Shortcut Id="ApplicationDesktopShortcut" Name="PlanLetenja" Description="PlanLetenja" Target="[INSTALLFOLDER]PlanLetenja.exe" WorkingDirectory="INSTALLFOLDER" />
+      <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+      <RegistryValue Root="HKCU" Key="Software\PlanLetenja" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+    </Component>
+  </DirectoryRef>
+</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+      	<Component Id="slikalogo.jpg" Guid="F4C9DF70-C60A-46CF-9D5D-AC9583054A88">
+			  <File Id="slikalogo.jpg" Name="slikalogo.jpg" Source="$(var.PlanLetenja_TargetDir)slikalogo.jpg" />
+			</Component>
+			<Component Id="icon.ico" Guid="fe766fda-c6ae-435d-b86e-8cfec0a9580c">
+			  <File Id="icon.ico" Name="icon.ico" Source="$(var.PlanLetenja_TargetDir)icon.ico" />
+			</Component>
+			<Component Id="ikona.ico" Guid="ea89cecc-ea8d-45f3-85e6-0998340c55b2">
+			  <File Id="ikona.ico" Name="ikona.ico" Source="$(var.PlanLetenja_TargetDir)ikona.ico" />
+			</Component>
+			<Component Id="PlanLetenja.exe" Guid="eb3121c4-0322-4c0d-9158-4cf07480f1ef">
+			  <File Id="PlanLetenja.exe" Name="PlanLetenja.exe" Source="$(var.PlanLetenja_TargetDir)PlanLetenja.exe" />
+			</Component>
+			<Component Id="PlanLetenja.exe.config" Guid="cb082599-8bab-4330-b0d4-c079358e7b8d">
+			  <File Id="PlanLetenja.exe.config" Name="PlanLetenja.exe.config" Source="$(var.PlanLetenja_TargetDir)PlanLetenja.exe.config" />
+			</Component>
+			<Component Id="AdvancedDataGridView.dll" Guid="2f5d513a-29e0-48bb-be52-5f50a5990233">
+			  <File Id="AdvancedDataGridView.dll" Name="AdvancedDataGridView.dll" Source="$(var.PlanLetenja_TargetDir)AdvancedDataGridView.dll" />
+			</Component>
+			<Component Id="itextsharp.dll" Guid="d085e9c4-6033-400c-bbb5-76b9801a5bc6">
+			  <File Id="itextsharp.dll" Name="itextsharp.dll" Source="$(var.PlanLetenja_TargetDir)itextsharp.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

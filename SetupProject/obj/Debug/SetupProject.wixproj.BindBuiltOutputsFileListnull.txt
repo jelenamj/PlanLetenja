@@ -1,0 +1,2 @@
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\SetupProject\bin\Debug\Setup.msi
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\SetupProject\bin\Debug\Setup.wixpdb

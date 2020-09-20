@@ -1,0 +1,8 @@
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda\PlanLetenja\SetupProject\bin\Debug\Setup.msi
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda\PlanLetenja\SetupProject\bin\Debug\Setup.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\SetupProject.wixproj.BindContentsFileListnull.txt
+obj\Debug\SetupProject.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SetupProject.wixproj.BindBuiltOutputsFileListnull.txt
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\SetupProject\bin\Debug\Setup.msi
+C:\Users\jelena\Desktop\PlanLetenja posljednja verzija valjda -pdf novi\PlanLetenja\SetupProject\bin\Debug\Setup.wixpdb
